@@ -3,9 +3,9 @@
 docker installed
 
 # docker:
-docker build . -t <some tag name>
-detached : docker run -p 3000:5000 -d <some tag name>
-interactive (recommended for debug): docker run -p 3000:5000 -it <some tag name>
+docker build . -t <some tag name>    
+detached : docker run -p 3000:5000 -d <some tag name>    
+interactive (recommended for debug): docker run -p 3000:5000 -it <some tag name>    
 
 
 
