@@ -7,18 +7,18 @@ docker installed
 
 
 # Run on docker  
-docker build . -t <some tag name>
-detached : docker run -p 3000:5000 -d <some tag name>
-interactive (recommended for debug): docker run -p 3000:5000 -it <some tag name>
+docker build . -t <some tag name>  
+detached : docker run -p 3000:5000 -d <some tag name>  
+interactive (recommended for debug): docker run -p 3000:5000 -it <some tag name>  
 
 
-# Run locally  
-python -m venv env
-env\Scripts\Activate
-python -m pip install -r ./requirements.txt
-python app.py
+# Run on local computer
+python -m venv env  
+env\Scripts\Activate  
+python -m pip install -r ./requirements.txt  
+python app.py  
 
 
 # Use sample api  
-127.0.0.1:3000/isAlive
-127.0.0.1:3000/prediction/api/v1.0/some_prediction?f1=4&f2=4&f3=4
+127.0.0.1:3000/isAlive  
+127.0.0.1:3000/prediction/api/v1.0/some_prediction?f1=4&f2=4&f3=4  
