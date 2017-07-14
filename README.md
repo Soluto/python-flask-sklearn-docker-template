@@ -1,6 +1,6 @@
 ## python-flask-docker-sklearn-template
 A simple example of python api for real time machine learning.
-On init, a simple linear regression model is created and saved on machine. On request arrival for prediction, the simple model is loaded and returing prediction.
+On init, a simple linear regression model is created and saved on machine. On request arrival for prediction, the simple model is loaded and returning prediction.
 
 # requirements  
 docker installed
