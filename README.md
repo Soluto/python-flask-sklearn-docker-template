@@ -16,7 +16,7 @@ interactive (recommended for debug): docker run -p 3000:5000 -it {some tag name}
 
 # Run on local computer
 python -m venv env  
-source env/bin/activate
+source env/bin/activate  
 python -m pip install -r ./requirements.txt  
 python app.py  
 
