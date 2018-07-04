@@ -8,17 +8,24 @@ For more information read [this post](https://blog.solutotlv.com/deployed-scikit
 docker installed
 
 
-# Run on docker  
-docker build . -t {some tag name}   
+# Run on docker - local 
+docker build . -t {some tag name}  -f ./Dockerfile_local
 detached : docker run -p 3000:5000 -d {some tag name}  
 interactive (recommended for debug): docker run -p 3000:5000 -it {some tag name}  
+
+
+# Run on docker - production 
+Using uWSGI and nginx for production 
+docker build . -t {some tag name}   
+detached : docker run -p 3000:80 -d {some tag name}  
+interactive (recommended for debug): docker run -p 3000:80 -it {some tag name}  
 
 
 # Run on local computer
 python -m venv env  
 source env/bin/activate  
 python -m pip install -r ./requirements.txt  
-python app.py  
+python main.py  
 
 
 # Use sample api  
