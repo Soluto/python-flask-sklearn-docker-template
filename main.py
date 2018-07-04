@@ -1,4 +1,5 @@
 #!flask/bin/python
+import os
 from flask import Flask
 from flask import request
 import pandas as pd
@@ -24,7 +25,9 @@ def get_prediction():
     loaded_model = pickle.load(open('some_model.pkl', 'rb'))
     prediction = loaded_model.predict([[feature1, feature2, feature3]])
     return str(prediction)
-   
+
 if __name__ == '__main__':
-    app.run(port=5000,host='0.0.0.0')        
-    # app.run(debug=True)
+    if os.environ['ENVIRONMENT'] == 'production':
+        app.run(port=80,host='0.0.0.0')
+    if os.environ['ENVIRONMENT'] == 'local':
+        app.run(port=5000,host='0.0.0.0')

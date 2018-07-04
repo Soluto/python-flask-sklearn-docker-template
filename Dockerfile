@@ -1,13 +1,10 @@
-FROM python:3.5.3
+FROM tiangolo/uwsgi-nginx-flask:python3.6
 
 WORKDIR /app/
 
 COPY requirements.txt /app/
 RUN pip install -r ./requirements.txt
 
-COPY app.py __init__.py /app/
+ENV ENVIRONMENT production
 
-# ENTRYPOINT /bin/bash
-EXPOSE 5000
-
-ENTRYPOINT python ./app.py
+COPY main.py __init__.py /app/
